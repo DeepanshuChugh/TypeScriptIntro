@@ -48,3 +48,19 @@ function PhoneBook(userData) {
     persons.push(userData);
     return persons;
 }
+var dummyAdmin = {
+    type: "admin",
+    name: "shivam",
+    age: 21,
+    role: "FSD"
+};
+var dummyUser = {
+    type: "user",
+    name: "shivam",
+    age: 21,
+    occupation: "DEveloper"
+};
+function checktype(fn) {
+    return fn.type;
+}
+console.log(checktype(dummyUser));

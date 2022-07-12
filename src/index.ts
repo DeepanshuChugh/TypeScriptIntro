@@ -117,3 +117,37 @@ function PhoneBook(userData: PersonDetails) {
   persons.push(userData);
   return persons;
 }
+
+// Write a function to retrieve the type of the user or admin
+
+interface User {
+  type: "user";
+  name: string;
+  age: number;
+  occupation: string;
+}
+
+interface Admin {
+  type: "admin";
+  name: string;
+  age: number;
+  role: string;
+}
+
+const dummyAdmin: Admin = {
+  type: "admin",
+  name: "shivam",
+  age: 21,
+  role: "FSD",
+};
+const dummyUser: User = {
+  type: "user",
+  name: "shivam",
+  age: 21,
+  occupation: "DEveloper",
+};
+
+function checktype(fn) {
+  return fn.type;
+}
+console.log(checktype(dummyUser));
